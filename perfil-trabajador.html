@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de trabajador</title>
+  <!-- Hoja de estilos compartida para toda la interfaz -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor de fondo que centra la tarjeta -->
+  <div class="background">
+    <!-- Tarjeta con la informacion del trabajador -->
+    <div class="login-card">
+      <h1>Perfil de trabajador</h1>
+      <p class="subtitle">Datos vinculados a tu empresa</p>
+
+      <div class="profile-section">
+        <h2>Datos personales</h2>
+        <p><strong>Nombre:</strong> <span id="worker-name">-</span></p>
+        <p><strong>Correo:</strong> <span id="worker-email">-</span></p>
+      </div>
+
+      <div class="profile-section">
+        <h2>Empresa</h2>
+        <p><strong>Nombre:</strong> <span id="worker-company">-</span></p>
+      </div>
+
+      <div class="profile-actions">
+        <button type="button" id="worker-back">Ir a login</button>
+        <button type="button" id="worker-logout">Cerrar sesi&oacute;n</button>
+      </div>
+
+      <p class="status" id="worker-profile-status" aria-live="polite"></p>
+    </div>
+  </div>
+  <!-- Script compartido que rellena el perfil y controla acciones -->
+  <script src="script.js"></script>
+</body>
+</html>

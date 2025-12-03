@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesi&oacute;n</title>
+  <!-- Hoja de estilos compartida para login y registro -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor de fondo que centra la tarjeta -->
+  <div class="background">
+    <!-- Tarjeta con el formulario de acceso -->
+    <div class="login-card">
+      <h1>Mi Web</h1>
+      <p class="subtitle">Inicia sesi&oacute;n para continuar</p>
+      <form id="login-form">
+        <!-- Campo para correo electr&oacute;nico -->
+        <div class="input-group">
+          <label for="email">Correo electr&oacute;nico</label>
+          <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+        <!-- Campo para contrase&ntilde;a -->
+        <div class="input-group">
+          <label for="password">Contrase&ntilde;a</label>
+          <input id="password" type="password" name="password" placeholder="********" required>
+        </div>
+        <button type="submit">Iniciar sesi&oacute;n</button>
+        <!-- Mensaje de estado para retroalimentacion rapida -->
+        <p class="status" id="login-status" aria-live="polite"></p>
+        <p class="extra">&iquest;No tienes cuenta? <a href="registro.html">Reg&iacute;strate</a></p>
+        <p class="extra">Eres trabajador? <a href="trabajador.html">Inicia sesi&oacute;n aqu&iacute;</a></p>
+      </form>
+    </div>
+  </div>
+  <!-- Script que maneja el envio del formulario -->
+  <script src="script.js"></script>
+</body>
+</html>

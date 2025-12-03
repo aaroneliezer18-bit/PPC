@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login de trabajador</title>
+  <!-- Hoja de estilos compartida -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor de fondo que centra la tarjeta -->
+  <div class="background">
+    <!-- Tarjeta con el formulario de acceso del trabajador -->
+    <div class="login-card">
+      <h1>Trabajador</h1>
+      <p class="subtitle">Inicia sesi&oacute;n con tu correo de empresa</p>
+      <form id="worker-login-form">
+        <!-- Campo para correo corporativo -->
+        <div class="input-group">
+          <label for="worker-email">Correo corporativo</label>
+          <input id="worker-email" type="email" name="email" placeholder="tu@empresa.com" required>
+        </div>
+        <!-- Campo para contrase&ntilde;a -->
+        <div class="input-group">
+          <label for="worker-password">Contrase&ntilde;a</label>
+          <input id="worker-password" type="password" name="password" placeholder="********" required>
+        </div>
+        <button type="submit">Entrar</button>
+        <!-- Mensaje de estado para retroalimentacion rapida -->
+        <p class="status" id="worker-login-status" aria-live="polite"></p>
+        <p class="extra">&iquest;Eres administrador? <a href="index.html">Inicia sesi&oacute;n como empresa</a></p>
+      </form>
+    </div>
+  </div>
+  <!-- Script que maneja el envio del formulario -->
+  <script src="script.js"></script>
+</body>
+</html>

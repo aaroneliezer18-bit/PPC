@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de empresa</title>
+  <!-- Hoja de estilos compartida para toda la interfaz -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor de fondo que centra la tarjeta -->
+  <div class="background">
+    <!-- Tarjeta con la informacion de perfil -->
+    <div class="login-card">
+      <h1>Perfil de empresa</h1>
+      <p class="subtitle">Resumen de la cuenta creada</p>
+
+      <!-- Datos basicos de la empresa -->
+      <div class="profile-section">
+        <h2>Empresa</h2>
+        <p><strong>Nombre:</strong> <span id="profile-company">-</span></p>
+        <p><strong>Contacto:</strong> <span id="profile-email">-</span></p>
+      </div>
+
+      <!-- Datos del responsable -->
+      <div class="profile-section">
+        <h2>Responsable</h2>
+        <p><strong>Nombre:</strong> <span id="profile-name">-</span></p>
+      </div>
+
+      <!-- Formulario para crear trabajadores -->
+      <div class="profile-section">
+        <h2>Agregar trabajador</h2>
+        <form id="worker-create-form">
+          <div class="input-group">
+            <label for="worker-fullname">Nombre completo</label>
+            <input id="worker-fullname" type="text" name="fullname" placeholder="Nombre y apellido" required>
+          </div>
+          <div class="input-group">
+            <label for="worker-email-new">Correo corporativo</label>
+            <input id="worker-email-new" type="email" name="email" placeholder="persona@empresa.com" required>
+          </div>
+          <div class="input-group">
+            <label for="worker-password-new">Contrase&ntilde;a</label>
+            <input id="worker-password-new" type="password" name="password" placeholder="********" required>
+          </div>
+          <button type="submit">Crear trabajador</button>
+          <p class="status" id="worker-create-status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <!-- Lista de trabajadores creados -->
+      <div class="profile-section">
+        <h2>Trabajadores</h2>
+        <ul class="worker-list" id="worker-list">
+          <!-- Se rellena desde JS -->
+        </ul>
+      </div>
+
+      <!-- Acciones rapidas -->
+      <div class="profile-actions">
+        <button type="button" id="back-to-login">Ir al inicio</button>
+        <button type="button" id="logout">Cerrar sesi&oacute;n</button>
+      </div>
+
+      <!-- Mensaje de estado para avisos -->
+      <p class="status" id="profile-status" aria-live="polite"></p>
+    </div>
+  </div>
+  <!-- Script compartido que rellena el perfil y controla acciones -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta</title>
+  <!-- Hoja de estilos compartida para login y registro -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor de fondo que centra la tarjeta -->
+  <div class="background">
+    <!-- Tarjeta con el formulario de registro -->
+    <div class="login-card">
+      <h1>Mi Web</h1>
+      <p class="subtitle">Crea tu cuenta para continuar</p>
+      <form id="register-form">
+        <!-- Nombre comercial de la empresa -->
+        <div class="input-group">
+          <label for="company">Nombre de la empresa</label>
+          <input id="company" type="text" name="company" placeholder="Mi Empresa S.A." required>
+        </div>
+        <!-- Nombre completo -->
+        <div class="input-group">
+          <label for="fullname">Nombre completo</label>
+          <input id="fullname" type="text" name="fullname" placeholder="Nombre y apellido" required>
+        </div>
+        <!-- Correo electronico -->
+        <div class="input-group">
+          <label for="reg-email">Correo electr&oacute;nico</label>
+          <input id="reg-email" type="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+        <!-- Contrasena -->
+        <div class="input-group">
+          <label for="reg-password">Contrase&ntilde;a</label>
+          <input id="reg-password" type="password" name="password" placeholder="********" required>
+        </div>
+        <!-- Confirmacion de contrasena -->
+        <div class="input-group">
+          <label for="reg-password-confirm">Confirmar contrase&ntilde;a</label>
+          <input id="reg-password-confirm" type="password" name="passwordConfirm" placeholder="********" required>
+        </div>
+        <button type="submit">Crear cuenta</button>
+        <!-- Mensaje de estado para retroalimentacion rapida -->
+        <p class="status" id="register-status" aria-live="polite"></p>
+        <p class="extra">&iquest;Ya tienes cuenta? <a href="index.html">Inicia sesi&oacute;n</a></p>
+      </form>
+      <p class="extra">Acceso de trabajadores? Comp&aacute;rteles el <a href="trabajador.html">login de trabajadores</a></p>
+    </div>
+  </div>
+  <!-- Script que maneja el envio del formulario -->
+  <script src="script.js"></script>
+</body>
+</html>
